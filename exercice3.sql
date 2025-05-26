@@ -29,3 +29,5 @@ JOIN
     Materiel m ON r.Id_Materiel = m.Id_Materiel
 ORDER BY 
     u.Id_Utilisateurs;    
+
+    
