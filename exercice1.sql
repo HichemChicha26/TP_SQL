@@ -1,3 +1,6 @@
+-- Insertion de 10 lignes dans la table Materiel.
+-- Chaque matériel est identifié par un Id_Materiel unique (ex. 'M001').
+-- On précise également le nom du matériel et la quantité disponible.
 INSERT INTO Materiel (Id_Materiel, nom_materiel, Quantite) VALUES
 ('M001', 'Projecteur HD', '3'),
 ('M002', 'Ordinateur portable', '5'),
@@ -10,6 +13,10 @@ INSERT INTO Materiel (Id_Materiel, nom_materiel, Quantite) VALUES
 ('M009', 'Casque audio', '3'),
 ('M010', 'Imprimante 3D', '1');
 
+
+-- Insertion de 5 réservations effectuées par différents utilisateurs.
+-- Chaque réservation comporte : un identifiant, une date de début, une date de fin,
+-- un identifiant utilisateur et un identifiant du matériel réservé.
 INSERT INTO Reservations (Id_Reservation, date_début, date_fin, Id_Utilisateurs, Id_Materiel) VALUES
 (1, '2025-05-01', '2025-05-05', 1, 'M002'),
 (2, '2025-05-03', '2025-05-04', 2, 'M001'),
@@ -17,6 +24,10 @@ INSERT INTO Reservations (Id_Reservation, date_début, date_fin, Id_Utilisateurs
 (4, '2025-05-04', '2025-05-06', 4, 'M004'),
 (5, '2025-05-02', '2025-05-07', 5, 'M005');
 
+
+-- Insertion de 10 utilisateurs dans la table Utilisateurs.
+-- Chaque utilisateur est identifié par un Id_Utilisateurs unique.
+-- Les champs insérés sont : nom, prénom et adresse email.
 INSERT INTO Utilisateurs (Id_Utilisateurs, Nom, Prenom, email) VALUES
 (1, 'Durand', 'Alice', 'alice.durand@example.com'),
 (2, 'Martin', 'Bob', 'bob.martin@example.com'),
@@ -29,6 +40,12 @@ INSERT INTO Utilisateurs (Id_Utilisateurs, Nom, Prenom, email) VALUES
 (9, 'Roux', 'Ismaël', 'ismael.roux@example.com'),
 (10, 'Leclerc', 'Julie', 'julie.leclerc@example.com');
 
+
+-- Vérification de l’insertion des utilisateurs
 SELECT * FROM Utilisateurs;
+
+-- Vérification de l’insertion du matériel
 SELECT * FROM Materiel;
+
+-- Vérification de l’insertion des réservations
 SELECT * FROM Reservations;
